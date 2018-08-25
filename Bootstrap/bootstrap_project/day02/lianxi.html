@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>练习</title>
+    <style>
+        div{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <!--顶部-->
+      <div class="row">
+          <div class="col-sm-12">
+              <h1>BootStrap <i class="font-weight-normal">CSS</i><small> Type</small></h1>
+          </div>
+      </div>
+      <!--第二 搜索框-->
+      <div class="row">
+      <div class="col-sm-3 offset-sm-9">
+          <input type="text" class="form-control">
+      </div>
+      </div>
+      <!--d第三个部分-->
+      <!--1.左侧-->
+      <div class="row">
+          <div class="col-sm-3">
+              <ul class="list-unstyled">
+                  <li><a href="#">Strap</a></li>
+                  <li><a href="#">Global CSS</a></li>
+                  <li><a href="#">Compoent</a></li>
+                  <li><a href="#">Customize</a></li>
+              </ul>
+              </div>
+          <!--中间-->
+          <div class="col-sm-6">
+              <div>
+              <p >三人行必有我师</p>
+              <p >----孔子语</p>
+              </div>
+              <table class="table table-bordered table-striped">
+                  <tr>
+                      <th>编号</th>
+                      <th>名称</th>
+                      <th>作者</th>
+                      <th>价格</th>
+                  </tr>
+                  <tr>
+                      <td>001</td>
+                      <td>西游记</td>
+                      <td>文华</td>
+                      <td>19.90</td>
+                  </tr>
+                  <tr>
+                      <td>002</td>
+                      <td>三国</td>
+                      <td>成亮</td>
+                      <td>18.90</td>
+                  </tr>
+                  <tr>
+                      <td>003</td>
+                      <td>红楼梦</td>
+                      <td>张东</td>
+                      <td>26.69</td>
+                  </tr>
+                  <tr>
+                      <td>004</td>
+                      <td>水浒</td>
+                      <td>三胖</td>
+                      <td>19.90</td>
+                  </tr>
+              </table>
+          </div>
+          <!--右边-->
+          <div class="col-sm-3">
+              <h3>课程简介</h3>
+              <p><a href="#">HTML/CSS 3</a></p>
+              <p><a href="#">JS 8.0</a></p>
+              <p><a href="#">Node JS 7</a></p>
+              <p>知识改变命运</p>
+              <p>-----伟人</p>
+      </div>
+   </div>
+      <!--第四行-->
+      <div class="row">
+          <div class="col-sm-12">
+          <p class="text-center">版权所有 &copy Terena</p>
+          </div>
+      </div>
+
+      <h1 class="mt-5">弹性布局</h1>
+      <div class="d-flex border border-danger flex-column-reverse justify-content-between">
+          <div class="bg-danger p-3">item1</div>
+          <div class="bg-info p-3">iteme2</div>
+          <div class="bg-primary p-3">item3</div>
+          <div class="bg-warning p-3">itme4</div>
+      </div>
+      <h1 class="mt-5">弹性布局练习</h1>
+      <div >
+          <ul class="list-unstyled d-flex flex-row justify-content-around bg-light p-4">
+              <li>
+                  <img src="img/icon1.png" alt="">
+                  <p>品质保障</p>
+              </li>
+              <li>
+                  <img src="img/icon2.png" alt="">
+                 <p>私人定制</p>
+              </li>
+              <li>
+                  <img src="img/icon3.png" alt="">
+                  <p>学员特供</p>
+              </li>
+              <li>
+                  <img src="img/icon4.png" alt="">
+                  <p>专属特权</p>
+              </li>
+          </ul>
+      </div>
+    <h1 class="mt-5">表单</h1>
+      <form action="" class="">
+          <div class="border-0 form-group">
+              用户名称 <input type="text" class="form-control">
+          </div>
+          <div class="border-0">
+              用户密码 <input type="password" class="form-control">
+          </div>
+          <div class="border-0">
+              <input type="checkbox" class=""form-check-input form-check-label">自动登录
+          </div>
+          <div class="border-0 text-center">
+              <input type="button"  value="登录" class="bg-primary p-4 w-25 text-center">
+          </div>
+      </form>
+      <h1 class="bg-warning mt-5">表单练习</h1>
+      <form action="">
+          <!--第一行-->
+          <div class="row border-0">
+              <div class="col-3 border-0" >用户名</div>
+              <div class="col-6 border-0"><input type="text" class="form-control w-100"></div>
+              <div class="col-3 border-0">用户名包含字母数字 3-8位</div>
+              <!--第二行-->
+          </div>
+          <div class="row border-0 mt-3">
+              <div class="col-3 border-0">密码</div>
+              <div class="col-6 border-0"><input type="password" class="form-control w-100"></div>
+              <div class="col-3 border-0">密码包含数字字母 3-8位</div>
+          </div>
+       <!--最后一行-->
+          <div class="row mt-4 border-0 ">
+              <div class="col-5 offset-6 border-0 ">
+              <input type="button" class="bg-success p-3" value="注册">
+              <input type="button" class="bg-danger p-3" value="失败">
+              </div>
+          </div>
+      </form>
+  </div>
+</body>
+</html>

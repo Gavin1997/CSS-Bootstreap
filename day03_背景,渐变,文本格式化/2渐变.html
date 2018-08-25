@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>渐变</title>
+  <style>
+  div{
+    float:left;
+  }
+/*线性渐变*/
+   #d1{
+     width:200px;
+	 height:200px;
+	 border:1px solid #fff;
+	 background-image:-webkit-linear-gradient(90deg,red ,orange,yellow,green,Cyan,blue,purple);
+   }
+/*径向渐变*/
+   #d2{
+       width:200px;
+	   height:200px;
+	   border:1px solid #fff;
+	   background-image:radial-gradient(200px at center center,red 1%,yellow,blue 80%);
+	  
+       }
+/*重复线性渐变*/
+ #d3{ 
+     width:200px;
+	 height:200px;
+	 border:1px solid #fff;
+	 background-image:repeating-linear-gradient(0deg,red 0px,orange 50px,Cyan 100px);
+	 }
+/*重复径向渐变*/ 
+ #d4{
+     width:200px;
+	 height:200px;
+	 border:1px solid #fff;
+	 background-image:repeating-radial-gradient(10px at center center, yellow 5px,Cyan,red 10px);
+     
+ }
+
+ }
+  </style>
+ </head>
+ <body>
+  
+  <div id="d1"></div>
+  <div id="d2"></div>
+  <div id="d3"></div>
+  <div id="d4"></div>
+ 
+ </body>
+</html>

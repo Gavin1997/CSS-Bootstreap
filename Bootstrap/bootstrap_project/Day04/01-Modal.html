@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>模态框</title>
+</head>
+<body>
+  <div class="container">
+      <!--打开模态框的按钮-->
+      <button class="btn btn-info" data-toggle="modal" data-target="#myModal">打开模态框-查看歌曲</button>
+      <!--模态框的内容-->
+      <div class="modal" id="myModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h4>模态框标题-歌曲-林宥嘉</h4>
+                      <button class="close" type="button" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-title">
+                      <h3 class="ml-5">残酷月光</h3>
+                  </div>
+                  <div class="modal-body">
+                      模态框的提示信息-让我爱你 然后把我抛弃       我只要出发 不要目的
+
+                      我会一直想你 忘记了呼吸       孤独到底 让我昏迷
+
+                      如果恨你 就能不忘记你           所有的面目 我都不抗拒
+
+                      如果不够悲伤 就无法飞翔          可没有梦想 何必远方
+
+                      我一直都在流浪        可我不曾见过海洋
+
+                      我以为的遗忘        原来躺在你手上
+
+                      我努力微笑坚强          寂寞筑成一道围墙
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+     <!--模态框2-->
+      <button class="btn btn-danger" data-toggle="modal" data-target="#demo">点击查看模态框</button>
+      <div class="modal" id="demo">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5>标题:歌曲-李宗盛</h5>
+                      <button class="close" type="button" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-title">
+                      <h2 class="ml-5">漂洋过海来看你</h2>
+                  </div>
+                  <div class="modal-body">
+                      为你我用了半年的积蓄　飘洋过海的来看你
+                      为了这次相聚　我连见面时的呼吸都曾反覆练习
+                      言语从来没能将我的情意表达千万分之一
+                      为了这个遗憾　我在夜里想了又想　不肯睡去
+                      记忆它总是慢慢的累积　在我心中无法抹去
+                      为了你的承诺　我在最绝望的时候　都忍著不哭泣
+                      陌生的城市啊　熟悉的角落里
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>

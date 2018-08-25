@@ -1,0 +1,28 @@
+div {
+  border: 1px solid #f10215;
+  width: 200px;
+  margin: 0 auto; }
+
+p {
+  height: 500px; }
+
+a {
+  color: black; }
+  a:hover {
+    color: red; }
+
+h2 {
+  color: #f10215; }
+
+a:hover {
+  color: #f10215; }
+
+p {
+  background: #f10215; }
+
+p {
+  border-top: 1px solid #f10215; }
+
+ul {
+  list-style: none;
+  color: #f10215; }

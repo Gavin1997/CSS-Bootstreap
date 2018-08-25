@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+   div{
+   width:1000px;
+   height:600px;
+   margin:0px auto;
+   }
+    div>a{
+	 position:relative;
+	}
+  /*小方块*/
+    #s1,#s2{
+	 background:gray;
+	 width:30px;
+	 height:60px;
+	 position:absolute;
+	 border-radius:4px;
+	 float:right;
+	 opacity:0.3;
+	 top:-210px;
+	}
+	#s1{
+	 right:5px;
+	}
+	#s2{
+	 left:5px;
+	}
+	#s1:hover{
+	 background:black;
+	}
+	#s2:hover{
+	background:black;
+	}
+
+   /*大小于号*/
+   #right{
+   position:absolute;
+    top:20px;
+	left:10px;
+   }
+   #left{
+   position:absolute;
+    top:20px;
+	right:10px;
+   }
+
+
+   /*小圆点*/
+  .c1,.c2,.c3,.c4{
+	background:white;
+	width:14px;
+	height:14px;
+	float:left;
+    border:0px solid white;
+	position:absolute;
+	border-radius:50%;
+	}
+	.c1{
+    top:0px;
+	left:450px;
+	}
+	.c2{
+    top:0px;
+	left:470px;
+	}
+	.c3{
+    top:0px;
+	left:490px;
+	background:#0AA1ED;
+	}
+	.c4{
+    top:0px;
+	left:510px;
+	}
+
+  </style>
+ </head>
+ <body>
+    <div>
+    <a href="#">
+	  <img src="zuoye/banner3.png" alt="">
+	  <span id="s1"><img src="zuoye/right.png" alt="" id="right"></span>
+	  <span id="s2"><img src="zuoye/left.png" alt="" id="left"></span>
+	  <span id="c1" class="c1"></span>
+	  <span id="c2" class="c2"></span>
+	  <span id="c3" class="c3"></span>
+	  <span id="c4" class="c4"></span>
+	</a>
+	
+    </div>
+ </body>
+</html>

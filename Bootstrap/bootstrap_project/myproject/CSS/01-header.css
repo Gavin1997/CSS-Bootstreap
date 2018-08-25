@@ -1,0 +1,5 @@
+/*设置小字体*/
+header>ul.nav .nav-link.active,header>ul.nav .nav-link:hover {
+     color: #333333; !important;
+     background:none;
+ }

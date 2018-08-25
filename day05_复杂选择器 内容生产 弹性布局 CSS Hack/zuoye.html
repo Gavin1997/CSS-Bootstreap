@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>弹性布局</title>
+  <style>
+  body,p,div,ul{
+    margin:0;
+	padding:0;
+	}
+   #container{
+     display:flex;
+	 width:960px;
+	 margin:0px auto;
+	 flex-wrap: wrap;
+	 justify-content:space-between;	
+   }
+  div:nth-child(3){
+    margin-top:10px;
+ }
+ div:nth-child(4){
+    margin-top:10px;
+ }
+ div:nth-child(5){
+  margin-top:10px;
+ }
+ div:nth-child(6){
+  margin-top:10px;
+ }
+
+/*第一个项目 Apple*/
+  #Apple{
+    width:610px;
+	height:370px;
+	background:#E8E8E8;
+	position:relative;
+
+  }
+
+  p[id="title"]{
+     font:  32px "黑体";
+	 color:#333;
+	 margin:40px 300px 10px 40px;
+}
+  p[id="desc"]{
+      font-size:12px;
+      color:#666;
+      margin:0px 300px 0px 40px;
+  }
+ p[id="price"]{
+    font-size:24px;
+	color:#19A9F1;
+	margin:40px 40px 0px 40px;
+ }
+a[id="view"]{
+  display:block;
+  font-size:16px;
+  background:#19A9F1;
+  color:white;
+  border:1px solid #19A9F1;
+  border-radius:5px;
+  text-decoration:none;
+  width:130px;
+  height:45px;
+  text-align:center;
+  line-height:45px;
+  margin:10px 40px 0px 40px;
+}
+img.apple{
+  position:absolute;
+  top:60px;
+  left:170px;
+}
+img:hover{
+transform:scale(1.1);
+}
+
+/*第二个div项目 小米 */
+  #Mi{
+    width:340px;
+	height:370px;
+	position:relative;
+	background:#E8E8E8;
+  }
+  img.mi{
+  position:absolute;
+  top:110px;
+  left:40px;
+}
+ p[id="title2"]{
+   font:  32px "黑体";
+   color:#333;
+   margin:40px 90px 10px 20px;
+}
+p[id="desc2"]{
+      font-size:12px;
+      color:#666;
+      margin:0px 100px 0px 20px;
+}
+  p[id="price2"]{
+    font-size:24px;
+	color:#19A9F1;
+	margin:20px 90px 0px 20px;
+}
+  a[id="view2"]{
+  display:block;
+  font-size:16px;
+  background:#19A9F1;
+  color:white;
+  border:1px solid #19A9F1;
+  border-radius:5px;
+  text-decoration:none;
+  width:130px;
+  height:45px;
+  text-align:center;
+  line-height:45px;
+  margin:10px 40px 0px 20px;
+}
+/*第三个项目*/
+
+  div #Levon{
+    width:360px;
+	height:230px;
+	background:#E8E8E8;
+	position:relative;
+  }
+  img.levon{
+    position:absolute;
+    top:35px;
+    right:8px;
+  }
+  p[id="title3"]{
+    font:23px "黑体";
+    color:#333;
+    margin:40px 180px 0px 30px ;
+  }
+  p[id="price3"]{
+     font-size:18px;
+     color:#19A9F1;
+     margin:5px 90px 0px 30px;
+  }
+  a[id="view3"]{
+   display:block;
+   font-size:16px;
+  background:#19A9F1;
+  color:white;
+  border:1px solid #19A9F1;
+  border-radius:5px;
+  text-decoration:none;
+  width:120px;
+  height:40px;
+  text-align:center;
+  line-height:40px;
+  margin:10px 40px 0px 20px;
+  
+  }
+/*第四个项目*/
+  .small{
+        width:190px;
+	height:230px;
+	background:#E8E8E8;
+  }
+   .title4{
+     font-size:2px;
+     margin-left:40px;
+     }
+   .title5{
+     font-size:2px;
+     margin-left:25px;
+   }
+   .title6{
+     font-size:2px;
+     margin-left:24px;
+   }
+   .price4,.price5,.price6{
+     font-size:18px;
+     color:#19A9F1;
+     margin:8px 50px;
+   }
+   .view4,.view5,.view6{
+     text-decoration:none;
+     display:block;
+     font-size:10px;
+     background:#19A9F1;
+     color:white;
+     border:1px solid #19A9F1;
+     border-radius:5px;
+     width:100px;
+     height:30px;
+     text-align:center;
+     line-height:30px;
+     margin:0px 45px;
+
+   
+   }
+  </style>
+ </head>
+ <body>
+    <div id="container">
+	 <div id="Apple">
+	   <img src="index/study_computer_img1.png" width="388" height="302" border="0" alt="" class="apple">
+	 <p id="title">Apple MacBook Air系列</p>
+	 <p id="desc">酷睿双核i5处理器|256GB SSD|8G内存|英特尔HD显卡620含共享显卡内存</p>
+	 <p id="price">¥6988.00</p>
+	 <a id="view" href="#">查看详情</a>
+	 </div>
+	  
+	 <div id="Mi">
+	   <img src="index/study_computer_img2.png" width="286" height="248" border="0" alt="" class="mi">
+	   <p id="title2">小米Air 金属超轻薄</p>
+	   <p id="desc2">酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+	   <p id="price2">¥3488.00</p>
+	   <a href="#" id="view2">查看详情</a>
+	 </div>
+	 <div id="Levon" class="small">
+	   <img src="index/study_computer_img3.png" border="0" alt="" class="levon">
+	   <p id="title3">联想E480C 轻薄系列</p>
+	   <p id="price3">￥5399.00</p>
+	   <p><a href="#" id="view3">查看详情</a></p>
+	 </div>
+	 <div id="AUS" class="small">
+	   <img src="index/study_computer_img4.png" width="198" height="136" border="0" alt="">
+           <p class="title4">华硕RX310 金属超极本</p>
+           <p class="price4">￥4966.00</p>
+           <a href="#" class="view6">查看详情</a>
+	 </div>
+	 <div id="levon700" class="small">
+	     <img src="index/study_computer_img5.png" width="198" height="136" border="0"  alt="">
+	     <p class="title5">联想小新700 电竞版游戏本</p>
+             <p class="price5">￥6299.00</p>
+             <a href="#" class="view6">查看详情</a>
+	 </div>
+	 <div id="dell" class="small">
+	   <img src="index/study_computer_img3.png" width="198" height="136" border="0" alt="">
+	   <p class="title6">戴尔灵越燃7000 轻薄窄边</p>
+           <p class="price6">￥5199.00</p>
+           <a href="#" class="view6">查看详情</a>
+	 </div>
+	</div>
+ </body>
+</html>

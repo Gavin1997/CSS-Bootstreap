@@ -1,0 +1,17 @@
+/*设置小字体*/
+a{
+    text-decoration: none;
+}
+#footer{
+    width:100%;
+    padding:0px;
+    margin:0px;
+}
+@media screen and (min-width:992px) {
+    #footer>div{
+        width:992px;
+        margin:0 auto;
+        text-align: center;
+    }
+
+  }

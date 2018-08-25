@@ -1,0 +1,28 @@
+$jd_red:#f10215;
+$my_border:1px solid $jd_red;
+p{
+  border:$my_border;
+  $width:200px;
+  width: $width;
+}
+a{color:black;
+  &:hover{color:red;}
+}
+
+$jd_red:blue !default;
+h2{
+  color:$jd_red;
+}
+a:hover{
+  color:$jd_red;
+}
+p{
+  background:$jd_red;
+}
+p{
+  border-top:2px solid $jd_red;
+}
+
+footer{
+  color:$jd_red;
+}

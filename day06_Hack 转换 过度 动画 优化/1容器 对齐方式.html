@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>项目属性</title>
+  <style>
+    #container{
+	  border:1px solid red;
+	  display:flex;
+	  height:300px;
+	  justify-content:space-between;
+	  align-items:stretch;
+	}
+	div.c1{
+	  width:200px;
+	  background:yellow;
+	  order:2;
+	  flex-grow:5;
+	
+	
+	}
+	div.c2{
+	  width:200px;
+	  height:200px;
+	  background:green;
+	  order:3;
+       flex-grow:2;
+	   flex-shrink:2;
+	   align-self:flex-end;
+	}
+	div.c3{
+	  width:200px;
+	  height:200px;
+	  background:blue;
+	  order:1;
+	  flex-shrink:3;
+	}
+  </style>
+ </head>
+ <body>
+     <div id="container">
+	   <div class="c1"></div>
+	   <div class="c2"></div>
+	   <div class="c3"></div>
+	 
+	 </div>
+ </body>
+</html>

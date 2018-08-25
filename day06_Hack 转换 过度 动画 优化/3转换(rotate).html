@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>转换旋转</title>
+  <style>
+     div{
+	  width:200px;
+	  height:200px;
+	  position:absolute;
+	  top:200px;
+	  left:200px;
+	}
+	#d0{
+	  background:#666;
+	}
+     #d1{
+	   
+	   background:yellow;
+/*	   transform: rotate(45deg) translate(50px);*/
+	 }
+	 #d2{
+	   background:blue;
+/*	   transform:translate(50px) rotate(45deg);*/
+	 }
+	 #d2:hover{
+	   transform:skew(30deg);
+	 }
+	 #d3{
+	   width:200px;
+	   height:200px;
+	   background:black;
+	 }
+	 #d3:hover{
+	   transform:translate(200px,200px) rotate(135deg) skew(45deg) scale(1.5);
+	 }
+  </style>
+ </head>
+ <body>
+ 
+<!--           练习1: 
+            1.将元素d1先旋转45deg,再位移50px 
+			2.将元素d2先位移50px,再旋转45deg 
+			练习:2
+			页面中创建一个200*200px的div,设置背景颜色,鼠标悬停时,该元素向右偏移200px
+                向下偏移200px,旋转135deg,向着x轴倾斜45deg,同时放大1.5倍.
+
+			-->
+	 <div id="d0"></div>
+     <div id="d1"></div>
+     <div id="d2"></div>
+	 <div id="d3"></div>
+ </body>
+</html>

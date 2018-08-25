@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  a:link{
+    color:black;
+	text-decoration:none;
+  }
+   a:visited{
+   color:orange;
+  }
+  a:hover{
+  color:red;
+  }
+  a:active{
+  color:green;
+  }
+ 
+  input{
+   color:gray;
+   font-style:italic;
+  }
+  input:active{
+    font-style:normal;
+  }
+  input:focus{
+   color:red;
+  }
+  span{
+    color:red;
+  }
+  div span{
+    color:rgb(102,0,255);
+  }
+  </style>
+ </head>
+ <body>
+<!-- 1.页面中添加一个a标记,内容随意,设置以下样式
+           1.未别访问之前颜色为黑色,没有下划线
+            (text-decoration:none;)
+           2.鼠标悬停时,文本颜色为红色
+           3.被激活时(点击的一瞬间)颜色为绿色
+           4.访问后,字体颜色为蓝色
+          2.页面中再添加一个input输入框,默认字体颜色为灰色
+           字体为斜体(font-style:italic)
+            1.被激活时,字体为非斜体(font-style:normal;)
+            2.获取焦点时,字体颜色为红色   -->
+			<a href="http://www.tmooc.cn/">TMOOC</a><br>
+	       <input type=""><br>
+		   <div>
+		     <span>这是一个div元素</span>
+		   </div>
+		    <dl>戴尔
+              <dt>笔记</dt>
+			  
+              <dd>17R4</dd>
+           </dl>
+ </body>
+</html>

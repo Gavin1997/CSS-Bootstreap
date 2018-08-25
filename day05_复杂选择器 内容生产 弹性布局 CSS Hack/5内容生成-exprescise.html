@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>内容生成解决浮动元素</title>
+  <style>
+    [id="parent"]{
+	  border:1px solid red;
+	}
+	div[class="c"]{
+	  width:200px;
+	  height:200px;
+	  border:1px solid blue;
+	  float:left;
+	}
+/*1.浮动元素父元素高度的问题*/
+	div[id="parent"]::after{
+	 display:block;
+	 content:"";
+	 clear:both;
+	}
+	#d1{
+	 width:200px;
+	 height:200px;
+	 background:blue;
+	}
+	
+  </style>
+ </head>
+ <body>
+    <div id="parent">
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+<!-- 	<p style="clear:both;"></p> -->
+	</div>
+
+
+ </body>
+</html>

@@ -1,0 +1,57 @@
+.my_gray{
+    background-image:linear-gradient(180deg,#E3E3E3,#EBEBEB) ;
+    font-size:12px;
+}
+.my_btn_gray{
+  width:1.5rem;
+    background:linear-gradient(180deg,#F0F0F0,#E0E0E0);
+}
+.card-body>a{
+    text-decoration: none;
+}
+.myFont-size{
+    font-size:18px;
+
+}
+.my_position{
+    position:fixed;
+    top:46rem;
+    width:18em;
+}
+
+@media screen and (max-width:762px) {
+    .my_posttion{
+        position:relative;
+        width:100%;
+    }
+}
+.my_input_w{
+    width:2rem;
+    text-align: center;
+}
+/*分页边框*/
+.page-item .page-link{
+    border-color:#ddd;
+}
+.my_border-page{
+    border-color:#ddd;
+}
+.my-btn-size{
+    width:95%;
+    height:auto;
+}
+.w-95{
+    width:88% !important;
+}
+.my_small1{
+    font-size:0.7rem !important;
+    color:#666666;
+}
+.my_border_style{
+    border-bottom:0.2rem dashed #ddd;
+    border-top:0.2rem dashed #ddd;
+}
+/*右侧公告购物车中文字宽度*/
+span.input-group-text{
+    width:50%;
+}

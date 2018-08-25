@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>手风琴</title>
+</head>
+<body>
+  <div class="container">
+      <h1 class="w-50 mt-5 bg-warning">手风琴</h1>
+       <div id="parent">
+           <!--卡片一 -->
+           <div class="card">
+               <div class="card-header">
+                   <a class="card-link " href="#coll-one" data-toggle="collapse">卡片一</a>
+               </div>
+               <div id="coll-one" class="collapse show" data-parent="#parent">
+                   <div class="card-body ">
+                       内容一:----学习改变命运!
+                   </div>
+               </div>
+           </div>
+           <!--卡片二-->
+           <div class="card">
+               <div class="card-header">
+                   <a class="card-link" href="#coll-two" data-toggle="collapse">卡片二</a>
+               </div>
+               <div id="coll-two" class="collapse" data-parent="#parent">
+                   <div class="card-body">
+                       内容二:----!学的不仅仅是技术而是知识
+                   </div>
+               </div>
+           </div>
+           <!--卡片三-->
+           <div class="card">
+               <div class="card-header">
+                   <a class="card-link" href="#coll-three" data-toggle="collapse">卡片三</a>
+               </div>
+               <div id="coll-three" class="collapse" data-parent="#parent">
+                   <div class="card-body">
+                       内容三:----一点也不好玩!
+                   </div>
+               </div>
+           </div>
+       </div>
+  </div>
+</body>
+</html>

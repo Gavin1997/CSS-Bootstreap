@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>内容生成</title>
+  <style>
+    #d1::before{
+	   content:"汤姆:";
+	   padding-right:10px;
+	}
+	#d2::before{
+	  content:"Gavin:";
+	  padding-right:10px;
+	}
+	[id^="d2"]::after{
+	 content:"---<摘自中学英文课本>";
+     display:block;
+	 margin-left:300px;
+	}
+	a::before{
+	  content:url("index/computer_icon.png");
+	  padding-right:10px;
+	  
+	}
+	p::before{
+	  content:"子曰:";
+	  padding-right:5px;
+	  color:red;
+	  font-size:18px;
+	  
+	}
+	p::after{
+	  content:"----<摘自论语>";
+	  padding-left:5px;
+	}
+  </style>
+ </head>
+ <body>
+    <div id="d1">how are you</div>
+    <div id="d2">i am fine,thank you,and you?</div>
+	<a href="#">戴尔</a><br>
+	<a href="#">苹果</a>
+<!--  练习:<p>学而时习之,不亦说乎</p>
+         <p>有朋自远方来,不亦乐乎</p>
+        输出格式如下:
+           子曰:学而时习之,不亦说乎 ---<摘自论语>-->
+	     <p><b>学而时习之,不亦说乎</b></p>
+         <p>有朋自远方来,不亦乐乎</p>
+ </body>
+</html>

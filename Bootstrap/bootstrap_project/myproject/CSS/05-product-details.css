@@ -1,0 +1,40 @@
+/*五张小图的尺寸*/
+#list li img{
+    width:5.2rem !important;
+}
+.my_width{
+    width:28.5rem !important;
+}
+/*input输入框的宽度*/
+.my_input_w{
+    width:2rem;
+    text-align: center;
+}
+.my_bg_style{
+    background-image: linear-gradient(180deg,#EFEFEF,#E0E0E0);
+}
+/*动画效果*/
+.my_animition{
+    animation: turn 16s linear 0ms infinite ;
+}
+.my_animition:hover{
+    animation-play-state:paused ;
+}
+@keyframes turn {
+    0% {
+        transform:translateX(100%);
+    }
+    25%{
+        transform:translateX(0%);
+    }
+    50%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+/*为您推荐 文字宽度*/
+.my_p_width{
+    width:10rem;
+}

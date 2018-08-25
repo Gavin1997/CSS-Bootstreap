@@ -1,0 +1,146 @@
+一.CSS3 core
+  1.动画的兼容性
+    如果要兼容低版本浏览器需要在动画声明时加前缀.
+      @keyframes 动画名称{
+        定义关键帧    
+      }
+      @-webkit-keyframes 动画名称{}
+      @-ms-keyframes 动画名称{}
+      @-o-keyframes 动画名称{}
+      @-moz-keyframes 动画名称{}
+    2.CSS优化
+      1.CSS优化原则
+        尽量减少HTTP请求的个数
+        页面顶部引入CSS文件
+        将CSS和js文件放到外部独立的文件中
+      2.CSS代码优化
+        合并样式
+        缩小样式文件
+        减少样式重写
+        避免出现空src和href
+        选择更优的样式属性值
+        代码压缩
+二.Bootstrap
+  1.响应式布局(重点)
+    提示:难点-单词量大,必须要熟悉
+    2010年提出响应式布局
+   1.什么是响应式布局
+    Responsive web page:响应式/自适应网页,可以根据浏览设备的不同,(pc.pad.phone),而自动
+    更改布局,图片,文字效果,不会影响用户的浏览体验
+   2.响应式网页必须做到
+    1.布局:不能固定宽度,必须是流式布局
+    2.文字和图片大小随着容器的大小而改变
+    3.媒体查询技术
+    响应式网页存在的问题:代码的复杂度极大的增加,适用于内容不太多的页面(企业官网,门户介绍)
+   3.如何测试响应式网页
+    1.方法1:使用真实设备测试
+        好处:真实可靠
+        缺点:测试任务量较大
+    2.使用第三方的模拟软件
+       好处:无需添置太多真实设备,测试方便
+       缺点:测试效果有限
+    3.使用Chrome等浏览器自带的模拟器
+       好处:简单方便
+       缺点:测试效果有限,需要进一步验证
+    4.如何编写响应式网页(重点)
+      1.声明viewport原标签(手机适配)
+       <meta name="viewport" content="width=device-width,initial-scale=1.0,
+       maximum-scale=1.0,user-scalable=0,user-scalable=no,minimal-ui">
+       viewport元标签
+       早起3g手机为了浏览大尺寸的网页,只能强行把网页缩小,导致文字,图片变小
+         IOS提出了"视口"用于放网页的内容,超出部分,滑动显示,Android也借鉴此概念
+         width=device-width:表示视口的宽度就是设备宽度
+         initial-scale=1.0:表示视口的宽度是否缩放,1.0不缩放
+         maximum-scale=1.0:允许缩放的最大倍率
+         user-scalable=0:是否允许用户手动缩放,取值 /yes/no/1/0
+         minimal-ui: ios ui设置 隐藏导航栏等
+        一般设置:<meta name="viewport" content="width=device-width,initial-scale=1"
+      2.所有内容/文字/图片 使用相对尺寸 不要使用绝对值
+         .container{
+            width:1000px;
+            width:100%;
+            font-size:16px;
+            font-size:1rem;
+         }
+      3.流式布局+弹性布局,再搭配媒体查询技术使用
+         实现方式:float/flex
+      4.使用CSS3 Media Query技术-做响应式网页的必备条件
+            Media:媒体,指浏览器网页的设备,如:screen(pc/pad/phone),tv(电视机),
+            print(打印)
+           Media Query:媒体查询,可以自动根据当前浏览设备的不同,或者尺寸,方向,解析度不同,
+           有选择型的执行部分css样式,忽略其他部分css样式
+           1.根据媒体查询的两种使用方法
+             1.根据媒体查询结果使用不同的外部css文件
+              <link rel="stylesheet" href="pc.css" media="screen and (min-width:992px)">
+              <link rel="stylesheet" href="pad.css" media="screen and (min-width:768px) and 
+               (max-width:991px)">
+              <link rel="stylesheet" href="phone.css" media="screen and (max-width:767px)">
+            2.根据媒体查询的结果执行同一个css文件中不同的代码块
+              @medial screen and (min-width:768px) and (max-width:991px){
+                选择器{样式}
+              }
+  2.bootstrap框架
+       简洁,直观,强悍的前端开发框架,让web开发更迅速,简单
+          中文镜像官网: http://www.bootcss.com/
+
+        bootstrap内容分为五部分
+         1.如何使用bootstrap
+         2.全局css样式
+         3.组件
+         4.js插件
+         5.定制(scss)
+
+  3.起步-如何使用bootstrap
+       1.下载boot包--官网下载
+       2.设置基本模板
+           <meta name="viewport" content="width=device-width,initial-scale=1.0">
+               <link rel="stylesheet" href="CSS/bootstrap.css">
+               <script src="js/jquery.min.js"></script>
+               <script src="js/popper.min.js"></script>
+               <script src="js/bootstrap.min.js"></script>
+  4.全局CSS样式
+    1.按钮相关class
+          不同样式按钮:
+            .btn 基本按钮
+            .btn-danger 危险色
+            .btn-success 成功
+            .btn-warning 警告
+            .btn-info 信息
+            .btn-primary 主要按钮
+            .btn-secondary 次要按钮
+            .btn-dark 黑色
+            .btn-light 浅色的
+            .btn-link 链接
+          不同边框按钮
+            .btn-outline-danger 红色边框
+            .btn-outline-info    蓝色边框
+            .btn-outline-primary  主要边框
+          不同大小:
+             .btn-lg 大
+             .btn-sm 小
+             .btn-block 块级按钮
+    2.图片相关calss
+         .rounded 图角图片
+         .rounded-circle 椭圆图片
+         .img-thumbnail 缩率图
+         .img-fluid 响应式布局(图片会缩放,但不会超过原始大小)
+    3.文字相关class
+      .h1-.h6 不同大小的字体
+      .text-danger/success/info/primary/warning/dark..  文字颜色
+      .text-left/center/right/justify     对齐
+      .text-uppercase/lowercase/capitalize     大小写
+            大写       小写      首字母大写
+    4.列表相关的类
+      .list-unstyled 去除标识符
+      .list-group/list-group-item 创建列表组
+      .active 激活状态列
+      .disabled 禁用列表项
+
+      列表项目的颜色:
+       .list-group-item-success 成功
+       .list-group-item-danger 危险        
+       .list-group-item-info 信息        
+
+
+      
+      

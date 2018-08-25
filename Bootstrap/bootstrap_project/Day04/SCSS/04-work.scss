@@ -1,0 +1,88 @@
+@import "color";
+$my_color:orange;
+#crcle{
+  width:200px;
+  height:200px;
+  background:$my_color;
+  transition:all 1.5s linear 0ms;
+  &:hover{
+    border-radius: 50%;
+    background: green;
+  }
+}
+//时钟
+#clock{
+   margin:10rem;
+   width:300px;
+   height:300px;
+   border:5px solid blue;
+   border-radius: 50%;
+   position:relative;
+  p:first-child{
+    width: 6px;
+    height:80px;
+    background:purple;
+    position:absolute;
+    top:50px;
+    left:144px;
+    transform-origin:center bottom;
+    animation: turn 3600s linear 0ms;
+  }
+  p:last-child{
+    width: 3px;
+    height:120px;
+    background: $jd_red;
+    position:absolute;
+    top:10px;
+    left:146px;
+    transform-origin:center bottom;
+    animation: turn 60s linear 0ms;
+  }
+}
+@keyframes turn {
+    form{
+      transform: rotate(0deg);
+    }
+  to{
+    transform:rotate(360deg);
+  }
+}
+@mixin round-color {
+  border-radius: 5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  -o-border-radius:5px;
+  -ms-border-radius:5px;
+}
+ul{
+  list-style: none;
+
+  li{
+    padding:20px;
+    border:1px solid #ddd;
+    @include round-color;
+  }
+  a{
+    text-decoration: none;
+    color:#666;
+    &:hover {
+      color: $jd_red;
+    }
+      &:visited{
+        color:orange;
+      }
+    }
+    }
+@mixin my_shadow ($jd_blue,$show,$show1,$show2,$width,$bgcolor,$margin){
+  color:$jd_blue;
+  font-size:$show;
+  font-weight:$show1;
+  font-style:$show2;
+  width: $width;
+  background: $bgcolor;
+  margin:$margin;
+}
+h1{
+  @include my_shadow(green,24px,blod,italic,200px,pink,20px auto);
+}
+

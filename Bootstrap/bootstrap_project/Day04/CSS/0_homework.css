@@ -1,0 +1,106 @@
+/*重置样式*/
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+/*头部*/
+ul li{
+    float:left;
+}
+/*解决浮动带来的影响*/
+.top:after{
+    display:block;
+    clear:both;
+    content:"";
+}
+div.top{
+    background:#333333;
+    padding:15px 0;
+}
+div.top ul li a{
+    color:#9d9d9d;
+    font-size:14px;
+    margin-right:20px;
+}
+div.top a.first{
+    font-size:18px;
+    margin-left:50px;
+}
+/*中间主体*/
+div.middle {
+    text-align: center;
+    background-image: linear-gradient(45deg, #0E0635, #522648);
+    padding: 50px 0;
+}
+div.middle h1{
+    font-size:90px;
+    color: #fff;
+    padding:50px 0px 20px 0px;
+}
+div.middle h2{
+    font-size:24px;
+    color: #9d9d9d;
+}
+div.middle a.btn1{
+    display:block;
+    width:300px;
+    background:#337ab7;
+    border-radius:5px;
+    padding:13px 30px 15px ;
+    font-weight:bold;
+    margin:30px auto 20px;
+}
+div a.middle a.btn2{
+    color:#9d9d9d;
+}
+/*底部*/
+div.bottom img{
+    float:left;
+}
+/*PC端*/
+@media screen and (min-width:992px) {
+    .container{
+        margin:0 auto;
+    }
+    .top,.middle,.top{
+        width:100%;
+    }
+    .bottom img{
+        width:25%;
+    }
+}
+/*pad端*/
+@media screen and (max-width:991px) and (min-width:768px){
+    .container{
+        width:770px;
+        margin:0 auto;
+    }
+    .top,.middle,.top{
+        width:100%;
+    }
+    .bottom img{
+        width:50%;
+    }
+}
+
+/*phone*/
+@media screen and (max-width:767px){
+    .container{
+        width:100%;
+        margin:0 auto;
+    }
+    .top,.middle,.top{
+        width:100%;
+    }
+    .bottom img{
+        width:100%;
+    }
+}

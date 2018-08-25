@@ -1,0 +1,27 @@
+
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>通用兄弟选择器</title>
+  <style>
+    h3+div{
+	  margin-top:30px;
+	  font:italic bold 32px "黑体";
+	}
+   div~div{
+     margin-top:10px;
+	  font:italic bold 32px "黑体";
+   }
+  </style>
+ </head>
+ <body>
+<!-- 1.h3与div之间的间距为30px
+       2.从第二个div开始,每个div之间的间距为10px;  -->
+          <h3>静夜思</h3>
+       <div>窗前明月光,</div>
+       <div id="d2">疑是地上霜.</div>
+       <div>举头望明月,</div>
+       <div>低头思故乡.</div>
+ </body>
+</html>

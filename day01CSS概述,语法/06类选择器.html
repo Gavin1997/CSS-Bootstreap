@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<!-- 练习:新建一个网页,页面中添加div和p元素,内容随意,用类选择器为所有
+            元素设置字体颜色为红色,用分类选择器为p元素设置背景颜色为黑色  -->
+  <style>
+  .style{
+    font-size:24px;
+	color:red;
+  }
+  p.style{
+    background:black;
+  }
+
+  #h2{
+  color:purple;
+  font-style:italic
+  }
+/*后代选择器
+  div span{
+   color:red
+  }*/
+/*子代选择器*/
+  div>span{
+    color:blue
+  }
+  </style>
+ </head>
+ <body>
+ <!--     练习:页面中添加一对h2标记,内容随意,用id选择设置文本颜色为紫色(purple),字体为斜体
+      (font-style:italic)                                    -->
+  <h2 id="h2">Alien computer</h2>
+  <div class="style">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat a blanditiis culpa accusantium suscipit totam excepturi amet ducimus! Adipisci modi tenetur fugiat tempora eveniet quo voluptates placeat harum quae temporibus!</div>
+  <p class="style">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi nostrum iste vero a nihil architecto velit quibusdam maxime ut cupiditate quidem tempora provident minus. Beatae repellat officiis quidem hic corporis.</p>
+<!-- 用后代选择器设置span的字体颜色为红色,查看页面效果(div,span{}),用子代选择器设置span
+        的字体颜色为蓝色,查看页面效果 (div>span{})     -->
+		<div>
+        <p>11111
+          <span>3333</span>
+        </p>
+           <span>22222</span>
+         </div> 
+
+ </body>
+</html>

@@ -1,0 +1,29 @@
+
+ body{
+     font:16px "microsoft yahei";
+     padding:0;
+     margin:0;
+ }
+ /*pc>992px*/
+ @media screen  and (min-width: 992px){
+     .content{
+         color:#fff;
+         background:blue;
+         font-size:24px;
+     }
+ }
+ /*768px<pd<991px*/
+ @media screen and (max-width: 991px) and (min-width:768px)  {
+     .content{
+         color: #f2ebff;
+         background: red;
+     }
+ }
+ /*phone*/
+ @media screen and (max-width:767px){
+     .content{
+         color:#fff;
+         background: black;
+         font-size:12px;
+     }
+ }

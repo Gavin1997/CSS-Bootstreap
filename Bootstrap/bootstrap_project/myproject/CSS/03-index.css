@@ -1,0 +1,68 @@
+
+/*设置所有div快中的灰色背景*/
+h3 .card{
+    background-color:#E8E8E8;
+}
+
+/*第一块内容中大图的样式*/
+.my_img1{
+    margin-left:-10rem;
+    height:18rem;
+}
+@media screen and (max-width:767px) {
+    img.my_img1{
+       margin-left:0;
+       width:24rem;
+    }
+}
+/*第二张图*/
+.my_img2{
+    margin-left: -7rem;
+    margin-top:3rem;
+    height:15rem;
+}
+
+@media screen and (min-width:767px) and (max-width:991px) {
+    img.my_img2{
+        margin-left:-10rem;
+        width:24rem;
+    }
+}
+@media screen and (max-width:767px) {
+    img.my_img2{
+        margin:0 auto !important;
+    }
+    /*在小屏幕下 第一行 右边 card-body 要取消左右内边距*/
+    .my_div2{
+        padding-left:1rem !important;
+        padding-right: 1rem!important;
+        margin-top: 1rem;
+    }
+  .my_div4{
+      padding-left:1rem !important;
+      padding-right: 1rem !important;
+      margin-top: 1rem !important;
+  }
+}
+
+
+/*第二行 左边第一张图的样式*/
+.my_img3{
+  margin-left:-3rem;
+    height:13.8rem;
+}
+@media screen and (max-width:767px){
+    img.my_img3{
+        margin:auto !important;
+        width:12rem;
+    }
+}
+@media screen and (max-width:767px){
+    img.my_img4{
+        margin:auto !important;
+        width:10rem;
+    }
+}
+.my_btn{
+    line-height: 1.1;
+}

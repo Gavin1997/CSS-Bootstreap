@@ -1,0 +1,119 @@
+一.全局样式类
+  1.table相关样式类
+    .table 
+    .table-bordered 带边框的表格
+    .table-striped 隔行变色的表格
+    .table-hover 带鼠标悬停效果的表格
+    .table-primary/danger/success/info/warning/dark/light..表格颜色
+    .table-responsive 响应式表格用于table的父元素
+  2.辅助类
+    浮动:
+     .float-*-left/.float-right 左浮动/右浮动  *表示不同屏幕
+     .clearfix 清除浮动
+    显示:
+      .visible /.invisible 显示/隐藏
+    背景:
+      .bg-success/info/danger/warning.....
+    边框:
+      .border/border-0/border-top/border-bottom/border-left/border-left/border-right
+    边框颜色:
+      .border-success/info/danger/warning
+    边框倒角
+      .rounded/rounded-0 圆角
+      .rounded-top/bottom/left/right
+    居中对齐:
+       m-auto 元素居中对齐
+    边距:
+      m-*(*:0/1/2/3/4/5/ml/mr/mt/mb) margin外边距设置
+      p-*(*:0/1/2/3/4/5/pl/pr/pt/pb) padding内边距设置
+    宽度:
+      .w-*(*:25/50/75/100)   表示width:*%;
+    高度:
+      .h-*(*:25/50/75/100)   表示:height:*%;
+  3.栅格布局样式-重点 (grid)
+   1 web页面的布局方法有三种
+     1.table布局
+       优点:容易控制,简单
+       缺点:语义错误 渲染效率低
+     2.div+css布局
+      优点:语义正确,渲染效率高
+      不足:控制起来比较麻烦
+     3.Bootstrap 栅格布局
+      优点:简单,容易控制,语义正确,渲染效率高,支持响应式.
+      缺点:如果页面非常复杂不太适合
+   2.使用栅格布局
+     1.最外层需要使用容器
+       .container 定宽容器
+       .container-fluid 变宽容器100%
+     2.容器中声明行  .row(一行均分为12等份-12个单元格)
+     3.行中声明列    .col(每个列都需要指定宽度的占比n/12)
+     4.针对不同屏幕需要使用不同的列的占比
+       如 大屏幕: 4/12 三列 左中右
+          中屏幕  6/12 两列 左右
+          小屏幕  12/12 一列    
+          .col-xl-1/2/3.../12
+          .col-1g-1/2/3..../12
+          .col-md-1/2/3..../12
+          .col-sm-1/2/3.../12
+          xl:Extra large 超大屏幕 
+            w>=>1200px
+          lg:large  大PC屏幕
+             1200p>w>=992px
+          md:middle 中等pc屏幕
+              768px<w<992px
+          sm:smal   小pc屏幕
+               576px=<w<767px
+          xs:Extra small 超小屏幕
+              w<576px;
+        .col不添加数字时,自动处理布局,同一行的每个列宽度相等,两个col每个占50%
+        三个col每个占33.33%,四个col每个占25%;以此类推
+    5.注意不同屏幕下列的适应性问题
+      col-xl-* 只能在超大屏幕下有效
+      col-lg-* 在xl/lg屏幕下有效
+      col-md-* 在md/lg/xl屏幕下有效
+      col-sm-* 在sm/md/lg/xl屏幕下有效
+      总结: col 列可以在当前屏幕以及更大的屏幕下有效.
+        小尺寸可以适配大尺寸
+         ex:
+           <div class="col-sm-4 col-md-4" col-lg-4>
+           </div>
+        只用写 <dvi class="col-sm-4"></div>
+    6.可以使用"列偏移"实现指定列及其后的列向右偏移
+      偏移列通过  offset-*-*   类来设置
+        第一个星号:  sm/md/lg/xl 表示屏幕的大小
+        第二个星号   1-11的数字  这些类会把一个列的左外边距增加为*列
+    7.响应式:一个div可以指定在不同的屏幕下的不同宽度的占比
+      ex:
+        <div class="col-sm-6 col-md-4 col-1g-3"></div>
+    8.栅格嵌套
+       在列里面去嵌套其它的内容
+      ex:
+      <div class="row">
+         <div class="col-md-6">
+           <div class="row">
+             <div class="col-md-6">
+           </div>    
+        </div>
+         <div class="col-md-6"></div>
+        </div>
+  4.弹性布局
+    使用d-flex/d-inline-flex 类创建一个弹性容器
+    .flex-row 设置弹性的子元素水平显示,默认效果
+    .flex-row-reverse 设置右对齐的效果
+    .flex-column 设置弹性子元素垂直方向显示
+    .flex-column-reverse 垂直方向翻转子元素
+    .justify-content-* 修改弹性子元素的排列方式  取值(end,center,between或arround)
+    响应式flex类
+    根据不同的设备,去设置flex的类,从而实现页面的响应式布局
+     :sm/md/lg/xl 
+     .d-sm/md/lg/xl-flex
+     .flex-*-row
+     .flex-*-column
+  5.表单
+    .form-group 堆叠表单(垂直方向,全屏宽度)
+    .form-inline 内联表单(水平方向)
+    样式类:
+     form-control/form-check/form-check-inline/form-check-input/form-check-label/form-text
+
+                
+            

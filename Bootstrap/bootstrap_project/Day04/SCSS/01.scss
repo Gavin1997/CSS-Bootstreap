@@ -1,0 +1,35 @@
+$jd_red:#f10215;
+$my_border:1px solid $jd_red;
+$height:500px;
+$margin:0 auto;
+
+div{
+  border:$my_border;
+  $width:200px;
+  width:$width;
+  margin:$margin;
+}
+p{
+  height:$height;
+}
+a{color:black;
+  &:hover{color:red;}
+}
+$jd_red:blue !default;//重复变量 会覆盖前面的变量 //!default优先使用前面的红色
+h2{
+  color:$jd_red;
+}
+a:hover{
+  color:$jd_red;
+}
+p{
+  background:$jd_red;
+}
+p{
+  border-top:1px solid $jd_red;
+}
+
+ul{
+  list-style: none;
+  color:$jd_red;
+}

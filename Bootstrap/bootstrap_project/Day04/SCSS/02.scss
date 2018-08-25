@@ -1,0 +1,139 @@
+//导入局部scss文件
+@import "color";
+
+
+//div{
+//  background: $jd_red;
+//}
+header{
+  color:$jd_red;
+}
+$myColor:#0aa1ed;
+$my-height:2.5rem;
+$my-width:8rem;
+$fontColor:#fff;
+
+    p{
+      width:$my-width;
+      margin:50px;
+      height:$my-height;
+      background:$myColor;
+      text-align: center;
+      border-radius: 5px;
+    }
+   a{
+     color:$fontColor;
+     line-height:$my-height;
+     text-decoration:none;
+   }
+
+.my_btn{
+  background: $myColor;
+  color:$fontColor;
+  text-decoration: none;
+  text-align:center;
+  width:$my-width;
+  height:$my-height;
+  line-height: $my-height;
+  border-radius: 3px;
+  display:block;
+  margin:0 auto;
+}
+//练习:一个200*200的div,红色背景,鼠标悬停时过渡到黄色背景,并且变为圆形
+
+#d1{
+  width:200px;
+  height:200px;
+  background: $jd_blue;
+  transition:all 1.5s linear 0ms;
+  margin:0 auto;
+  &:hover{
+    border-radius: 50%;
+    background:$jd_red;
+  }
+}
+#d2{
+  width:300px;
+  height:300px;
+  border:5px solid blue;
+  border-radius:50%;
+  background: #ffffff;
+  position:relative;
+  margin:100px auto;
+
+  p:first-child{
+    width:6px;
+    height:60px;
+    background:purple;
+    position:absolute;
+    top:50px;
+    left:90px;
+    transform-origin:center bottom;
+    animation:turn 3600s linear 0ms infinite;
+  }
+  p:last-child{
+    width:4px;
+    height:80px;
+    background: red;
+    position:absolute;
+    top:30px;
+    left:90px;
+    transform-origin:center bottom;
+    animation:turn 60s linear 0ms infinite;
+  }
+}
+@keyframes  turn {
+   from { transform:rotate(0deg);
+   }
+  to {transform:rotate(360deg);
+  }
+}
+//混合器
+//定义混合器
+@mixin my_shadow{
+  -moz-box-shadow:0 0 50px 10px gray;
+  -webkit-box-shadow: 0 0 50px 10px gray;
+  -ms-box-shadow:0 0 50px 10px gray;
+  -o-box-shadow:0 0 50px 10px gray;
+}
+//使用混合器
+div{
+  @include my_shadow;
+}
+p{
+  @include my_shadow;
+}
+@mixin round-color{
+    border-radius: 5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  -o-border-radius:5px;
+  -ms-border-radius:5px;
+}
+ul{
+  list-style:none;
+  li{
+    padding:15px;
+    border:1px solid $jd_red;
+    @include round-color;
+    a{
+      color:$gray;
+      text-decoration:none;
+      &:hover{
+        color:$jd_red;
+      }
+    }
+  }
+}
+//带参的混合器
+@mixin link-colors($normal,$hover,$visited){
+  color:$normal;
+  &:hover{color:$hover;}
+  &:visited{color:$visited;}
+}
+
+ul li a{
+  @include link-colors(#000,yellow,green);
+}
+
+

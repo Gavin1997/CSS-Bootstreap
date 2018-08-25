@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>选择器</title>
+  <style>
+
+ /*1.通用选择器 */
+/*  *{*/
+/*    color:red;*/
+/*	font-size:32px;*/
+/*  }*/
+/*  body{*/
+/*    color:red;*/
+/*	font-size:32px;*/
+/*  }*/
+  div{
+  color:pink;
+  background:black;
+  }
+/* 类选择器 */
+ .my_fontsize{
+   font-size:50px;
+ }
+ .my_color{
+  color:blue;
+  font-size:60px;
+  
+ }
+/*分类元素*/
+ div.my_fontsize{
+  background:gray;
+ }
+/*群选择器*/
+ div,p,.my_fontsize,span,.my_color{
+  color:blue;
+ }
+/* 后代选择器*/
+ ul.main li a{
+ color:gray;
+ font-size:12px;
+ text-decoration:none;
+ }
+ ul.u1 li a{
+  color:black;
+  font-size:16px;
+  text-decoration:none;
+ }
+
+#a1:link{
+  color:black;
+}
+#a1:visited{
+  color:red;
+}
+
+#a1:hover{
+  color:green;
+}
+#a2:link{
+ text-decoration:none;
+ color:black;
+}
+#a2:visited{
+ color:orange;
+}
+#a2:hover{
+ color:red;
+}
+#a2:active{
+ color:green;
+}
+input{
+   color:gray;
+   font-style:italic;
+  }
+input:active{
+   font-style:normal;
+}
+input:focus{
+  color:red;
+}
+  </style>
+ </head>
+ <body>
+  <div class="my_fontsize">锄禾日当午</div>
+  <p class="my_fontsize">汗滴禾下土</p>
+  <span class="my_color">谁知盘中餐</span>
+  <div >粒粒皆辛苦</div>
+
+  <ul class="main" type="none">
+    <li>
+	   <a href="#">戴尔电脑一体机</a>
+	</li>
+    <li>
+	   <a href="#">迪斯美国足疗</a>
+	</li>
+    <li>
+	   <a href="#">鸿星尔克 童鞋</a>
+	</li>
+  </ul>
+  <ul class="u1" type="none">
+  	<li>
+	   <a href="#">手机<a href="#">/运营商</a></a>
+	</li>
+  	<li>
+	   <a href="#">电脑<a href="#">/办公</a></a>
+	</li>
+  	<li>
+		<a href="#">家居<a href="#">/家具</a></a>
+	</li>
+  	<li>
+	    <a href="#">男装<a href="#">女装</a></a>
+	</li>
+  </ul>
+  <a id="a1" href="https://www.sina.com.cn/">新浪</a>
+  <a id="a2" href="http://www.codeboy.com/" target=_blank>学子商城</a>
+  <p id="text">
+  <input type="text" >
+  </p>
+ </body>
+</html>

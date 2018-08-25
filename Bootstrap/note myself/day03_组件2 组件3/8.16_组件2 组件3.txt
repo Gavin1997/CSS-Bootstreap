@@ -1,0 +1,135 @@
+一.组件
+  1.下拉菜单
+    下拉菜单必须的三级结构:
+      <div class="dropdown">
+        <button data-toggle="dropdown">触发元素</button>
+        <ul class="dropdown-menu">隐藏元素</ul>
+      </div>
+      提示:上述data-toggle="dropdown" 会被bootstrap.js选中,添加事件监听.
+      标题:   .dropdown-header
+      分割线: .dropdown-divider
+      禁用:   .disabled
+      激活    .active
+  2.按钮组
+    在div元素上添加.btn-group类创建按钮
+      <div class="btn-group">
+         <a class="btn btn-success">按钮1</a>
+          <a class="btn btn-dangger">按钮2</a>
+          ..
+      </div>
+      使用.btn-group -lg/md/sm/xl 来设置按钮组的大小
+      使用.btn-group-vertical  来创建垂直按钮组
+  3.信息提示框
+     提示框可以使用  .alert类  后面加上 .alert-success /.alert-info/.alert-danger...
+       <div class="alert alert-danger alert-dismissible">
+         <span data-dismiss="alert" class="close">x</span>
+         </div>
+
+   4.导航
+     Bootstrap提供了三种形式的导航  水平导航 选型卡 胶囊
+     (1)水平导航
+       创建一个简单的水平导航,可以在<ul>元素上添加 .nav类
+       在每个<li>选项上添加 .nav-item类  在每个链接上添加.nav-link类(调整上边距)))
+         <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link"></a>
+            </li>
+         </ul>
+         注意:
+            1.通过设置的ul的justify-content-*导航的对齐方式
+            2. nav-justified类可以设置导航项等宽显示
+            3.用.flex-column类可以设置导航垂直排列
+      (2)选项卡导航
+        使用.nav-tabs类可以将导航转换为选项卡
+        如果要设置选项卡动态可切换,可以在每个链接上添加data-toggle="tab"属性
+         然后在每个选项对应的内容上添加 .tab-pane类
+                    <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class= href="#id" "nav-link" data-toggle="tab"</a>
+            </li>
+         </ul>
+         <div class="tab-content">
+              <div class="tab-pane active" id="home">Home: </div>
+              注意:上方的a链接中要去链接内容中的锚点
+      (3)胶囊导航
+        .nav.pills 类 可以将导航设置成胶囊形状
+        胶囊状动态导航 主需要将tabs选项卡的data-toggle属性设置为pill;
+    5.导航栏
+      使用.navbar类创建导航栏,然后紧跟 .naver-expand-xl/lg/sm类来创建响应式导航栏(大屏幕展开,小屏幕垂直堆叠).
+      导航栏上的 选项可以用<ul>元素 并添加 .navbar-nav类,然后<li>元素上添加.nav-item ,<a>元素上使用nav-link类
+      注意:设置导航栏时 可用bg- 设置不同的背景颜色
+        div class="navbar navbar-expand-sm">
+          <ul class="navbar-nav">
+           <li class="nav-item">
+           <a href="#" class="nav-link"></a>
+           </li>
+    6.折叠
+      控制内容的隐藏与显示,在<a>或<button>元素上添加data-toggle="collapse" 
+      data-target="#id",属性是对应折叠的内容
+      <button data-toggle="collapse" data-target="#id">折叠</button>
+      <div id="demo" class="collapse">
+         ......
+      </div> 
+    7.折腾导航栏
+      
+      要创建折叠导航栏 需要在按钮上添加 .navbar-toggler类 data-toggle="collapse"与data-target="#id"
+      然后在设置了class="collapse navbar-collapse"类的div上包裹导航的内容(链接),div元素上的id匹配按钮data-target上的id值
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content">
+              <!--三条短横线-->
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="content" class="collapse navbar-collapse">
+          
+    8.卡片
+      通过.card与.card-body类创建一个卡片,  .card-header用于设置卡片的头部 .card-footer类用于创建卡片的底部
+      <div class="card">
+         <div class="card-header">头部</div>
+         <div class="card-body">主体</div>
+         <div class="card-footer">底部</div>
+      </div>
+      手风琴: 折叠+卡片 实现
+      注意:使用data-parent属性来确保所有的 折叠在指定父元素下,这样就能实现在一个折叠选项显示的时候其它的选项是隐藏的
+           <div id="parent">
+                <div class="card">
+                  <!--卡一-->
+              <div class="card-header">
+                  <a href="#coll-one" data-toggle="collapse">选项1</a>
+              </div>
+                  <div id="coll-one" class="collapse show" data-parent="#parent">
+              <div class="card-body">
+                    内容1:不好玩.
+              </div>
+              </div>
+              </div>
+           </div>   
+
+    9.媒体对象
+      Bootstrap提供了很多类来处理媒体对象(图片或视频)和内容的布局,应有场景博客评论,帖子,商品列表等
+      在容器元素上添加.media类 ,然后将多媒体内容放到子容器上,自容器需要去添加 .media-body类,可以使用align-self-*相关类设置多媒体图片的显示位置(上中下)
+      <div class="media">
+        <img src="x.jpg">
+        <div class="media-body">.......<div>
+      </div>
+    10.轮播
+      创建轮播: .carousel
+      为轮播添加指示符: .carousel-indicators
+      添加要切换的图片  .carousel-inner
+      指定每个图片的内容 .carousel-item
+    
+      <div class="carousel" data-ride="carousel">
+          指示器
+         <ul class="carousel-indicators">
+            <li data-traget="#id" data-slide-to="0"></li>
+            ....
+         </ul>
+         轮播图片
+         <div class="carousel-inner">
+            <div class="carousel-item active">....</div>
+            <div class="carousel-item active">....</div>
+         </div>
+         左右箭头
+         <a href="#id" class="carousel-control-prev" data-slide="prev">
+              <span class="carousel-control-prev-icon "></span>
+          </a>
+      </div>

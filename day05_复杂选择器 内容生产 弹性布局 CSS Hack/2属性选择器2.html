@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>属性选择器</title>
+  <style>
+  p[class][title]{
+    font-size:50px;
+	background:#eee;
+  }
+  p[id="p1"]{
+   font-size:60px;
+   background:yellow;
+  }
+/*[attr^=value] 开头*/
+  [id^="o"]{
+    font-size:32px;
+	background:red;
+  }
+  [id^="d"]{
+    background:green;
+  }
+  /*[attr~="value"]词汇*/
+  [class~="myclass"]{
+    background:pink;
+  }
+
+/*[attr$=value] 结尾*/
+[class$="e"]{
+ background:orange;
+}
+/*[attr*=value]包含*/
+[class*="f"]{
+  background:cyan;
+}
+
+  </style>
+ </head>
+ <body>
+    <div>
+           <p id="p1">老大</p>
+           <p class="c" title="这是一个段落元素">老二</p>
+           <span class="cabcde">老三</span>
+           <b class="cf">老四</b>
+		   <p class="cf">老五</p>
+		   <div id="d22">老六</div>
+		   <h1 id="one">老七</h1>
+		   <p class="myclass">风雨里追赶自由</p>
+         </div>
+ </body>
+</html>

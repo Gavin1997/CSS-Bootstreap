@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>练习-小组件</title>
+</head>
+<body>
+  <div class="container">
+      <h1 class="mt-5 bg-success">组件-模态框</h1>
+      <button class="btn btn-info" data-target="#demo" data-toggle="modal">打开模态框</button>
+      <div id="demo" class="modal bg-light">
+          <div class="modal-dialog">
+              <div class="modal-header">
+                  <h1>模态框头部</h1>
+              </div>
+              <div class="modal-title">
+                 <h1>模态框标题</h1>
+              </div>
+              <div class="modal-body">
+                  模态框主要内容模态框的提示信息-让我爱你 然后把我抛弃       我只要出发 不要目的
+
+                  我会一直想你 忘记了呼吸       孤独到底 让我昏迷
+
+                  如果恨你 就能不忘记你           所有的面目 我都不抗拒
+
+                  如果不够悲伤 就无法飞翔          可没有梦想 何必远方
+
+                  我一直都在流浪        可我不曾见过海洋
+
+                  我以为的遗忘        原来躺在你手上
+
+                  我努力微笑坚强          寂寞筑成一道围墙
+              </div>
+              <div class="modal-footer">
+                  <button type="button" data-dismiss="modal" class="btn btn-secondary">点击关闭</button>
+              </div>
+          </div>
+      </div>
+      <h1 class="mt-5 bg-success">徽章</h1>
+      <div class="badge">
+          <ul class="list-unstyled">
+              <li class=" badge btn btn-danger badge-pill">收件箱</li>
+              <li>发件箱 <span class="badge btn btn-info badge-pill">25</span></li>
+              <li></li>
+          </ul>
+      </div>
+      <h1 class="mt-5 bg-success">分页</h1>
+      <ul class="pagination pagination-lg">
+          <li class="page-item"><a href="#" class="page-link">1</a></li>
+          <li class="page-item"><a href="#" class="page-link">2</a></li>
+          <li class="page-item"> <a href="#" class="page-link">3</a></li>
+          <li class="page-item"><a href="#" class="page-link">4</a></li>
+      </ul>
+      <h1 class="mt-5 bg-success">面包屑</h1>
+      <ul class="breadcrumb">
+          <li class="breadcrumb-item">4</li>
+          <li class="breadcrumb-item">3</li>
+          <li class="breadcrumb-item">2</li>
+          <li class="breadcrumb-item">1</li>
+      </ul>
+      <h1 class="mt-5 bg-success">进度条</h1>
+      <div class="progress">
+          <div class="progress-bar w-50 progress-bar-striped progress-bar-animated">1</div>
+      </div>
+      <div class="progress mt-3 ">
+          <div class="progress-bar w-25  bg-danger progress-bar-striped progress-bar-animated">危险</div>
+          <div class="progress-bar w-50  bg-warning    progress-bar-striped progress-bar-animated">警告</div>
+          <div class="progress-bar w-75  bg-info p   progress-bar-striped progress-bar-animated">再次警告</div>
+          <div class="progress-bar w-100  bg-success   progress-bar-striped progress-bar-animated">安全</div>
+      </div>
+  </div>
+</body>
+</html>
